@@ -169,6 +169,4 @@ table.bind("<ButtonRelease-1>",getrecord)
 table.pack(fill=X)
 
 
-
 fenetre.mainloop()
-

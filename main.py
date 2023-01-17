@@ -147,3 +147,28 @@ btnClr.grid(row=0,column=3)
 myFrame=Frame(fenetre)
 myFrame.place(x=0,y=470,width=1300,height=500)
 
+style=ttk.Style()
+style.configure("Treeview",font=("arial",15),rowheight=35,background="#F5F5F5")
+style.configure("Treeview.Heading",font=("arial",16,"bold"),background="#F5F5F5")
+
+table=ttk.Treeview(myFrame,columns=(0,1,2,3,4,5,6,7))
+
+table.column("1",stretch=NO,width=0)
+table.column("0",width=60)
+
+table.heading("0",text="S.NO")
+table.heading("1",text="ID")
+table.heading("2",text="Full Name")
+table.heading("3",text="CIN")
+table.heading("4",text="Phone number")
+table.heading("5",text="Address")
+table.heading("6",text="Type of donation")
+table.heading("7",text="Description")
+table["show"]='headings'
+table.bind("<ButtonRelease-1>",getrecord)
+table.pack(fill=X)
+
+
+
+fenetre.mainloop()
+
